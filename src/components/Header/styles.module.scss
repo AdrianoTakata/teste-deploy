@@ -1,0 +1,137 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .logo {
+      margin-right: 1.875rem;
+    }
+
+    .wrapperPhoto {
+      order: 1;
+
+      .photo {
+        padding: 0.125rem;
+        border-radius: 2rem;
+        width: 3.875rem;
+        height: 3.875rem;
+      }
+    }
+  }
+
+  .navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 78%;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5rem;
+      text-decoration: none;
+      color: var(--white)
+    }
+
+    .icons {
+      font-size: 1rem;
+    }
+  }
+
+  .navList>*+* {
+    margin-left: 1.25rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 70%;
+
+  .inputBox {
+    height: 2.421rem;
+    padding-right: 2.2rem;
+    box-sizing: border-box;
+    border: 1.05px solid var(--gray-400);
+    background-color: var(--white);
+    border-radius: 1rem;
+  }
+
+}
+
+@media(max-width: 390px) {
+  .header {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+    border-bottom-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+
+    .navbar {
+      width: 100%;
+
+      .toggle {
+        order: -1;
+      color: white;
+
+      }
+
+      .wrapperPhoto {
+        order: 0;
+
+        .photo {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+
+      .form {
+        width: 100%;
+
+        .inputBox {
+          font-size: .7rem
+        }
+      }
+
+      .navList {
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+
+        > * + * {
+          margin-left: 0;
+        }
+
+        a {
+          flex-direction: row;
+
+          svg {
+            margin-right: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}
