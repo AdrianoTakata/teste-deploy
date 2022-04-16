@@ -46,11 +46,9 @@ export function Schedule() {
             start_time: "2022-04-15T15:00:00.969Z",
             end_time: "2022-04-15T15:30:00.969Z",
             description: "Dúvida no método post",
-            userId1: "userId",
+            userId1: userId,
             userId2: mentorId
         }
-        const aux = toast("Agendamento marcado com sucesso", { autoClose: 3000, pauseOnHover: false });
-        console.log(aux)
         try {
             const response = await axios({
                 method: 'post',
@@ -162,6 +160,7 @@ export function Schedule() {
                         </Card>
                     </Card>
                 </section>
+                <ToastContainer></ToastContainer>
             </CardGroup>
         </main >
     )
